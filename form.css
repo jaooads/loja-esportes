@@ -1,6 +1,12 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     position: relative;
-    font-family: Helvetica;
+    font-family: Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -9,7 +15,6 @@ body::before {
     content: "";
     background: url("img/background.png") center/cover no-repeat fixed;
     filter: blur(5px);
-    /*Ele desfoca o fundo apenas a imagem*/
     position: fixed;
     top: 0;
     left: 0;
@@ -20,19 +25,16 @@ body::before {
 
 main {
     padding: 20px;
-    padding-bottom: 60px;
-    /* Added padding-bottom */
+    padding-bottom: 60px; /* Adiciona espaçamento extra para evitar que o conteúdo encoste no rodapé */
 }
-
-
-/* Estilize o rodapé */
 
 footer {
     background-color: #000;
     color: white;
     text-align: center;
     padding: 10px;
-    top: 0;
+    position: fixed; /* Garante que o rodapé fique fixo na parte inferior */
+    bottom: 0;
     width: 100%;
 }
 
@@ -44,7 +46,6 @@ footer ul {
 footer li {
     display: inline;
     margin-right: 20px;
-    /* Espaçamento entre os itens */
 }
 
 #logo {
@@ -56,14 +57,12 @@ footer li {
 a {
     color: white;
     text-decoration: none;
-    margin-top: auto;
-    /*Remove o sublinhado*/
 }
 
 .box {
     color: white;
     position: absolute;
-    top: 600%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.6);
@@ -101,10 +100,10 @@ legend {
 
 .labelInput {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     pointer-events: none;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .inputUser:focus~.labelInput,
@@ -125,12 +124,12 @@ legend {
 #submit {
     background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
     width: 100%;
-    
     padding: 15px;
     color: white;
     font-size: 15px;
     cursor: pointer;
     border-radius: 10px;
+    border: none;
 }
 
 #submit:hover {
