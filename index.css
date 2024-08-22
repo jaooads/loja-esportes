@@ -1,0 +1,52 @@
+footer {
+    height: 250px;
+    width: auto;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    font-weight: 700;
+}
+
+#icon {
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    max-height: 50px;
+    margin-bottom: 0px;
+}
+
+#endereco {
+    text-align: right;
+    margin-top: auto;
+    /* Empurra o endereço para o final do rodapé */
+}
+
+#amem {
+    align-items: center;
+    top: 20px;
+    margin-right: auto;
+    height: 260px;
+}
+
+#banner {
+    top: 1%;
+    height: 500px;
+    width: 100vw;
+    ;
+}
+
+#test {
+    left: 50px;
+}
+
+#language {
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}

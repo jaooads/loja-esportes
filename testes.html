@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Brave Store</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        #logo {
+            max-width: 150px;
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 2;
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            margin: 6px 0;
+            transition: background-color 0.3s;
+        }
+
+        .menu-icon:hover div {
+            background-color: #ccc;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: #555;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        @media screen and (max-width: 768px) {
+            ul {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+            }
+
+            ul.show {
+                display: flex;
+            }
+
+            li {
+                float: none;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            li a, .dropbtn {
+                width: 100%;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content {
+                width: 100%;
+            }
+
+            .menu-icon {
+                top: 10px;
+                right: 10px;
+            }
+        }
+    </style>
+
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="img/logo.png">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Produtos</a>
+                <div class="dropdown-content">
+                    <a href="#">Categoria 1</a>
+                    <a href="#">Categoria 2</a>
+                    <a href="#">Categoria 3</a>
+                </div>
+            </li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div><img id="banner" src="img/bb.png"></div>
+    </main>
+
+    <footer id="amem">
+        <div>
+            <p>&copy;2023 Brave Store</p>
+            <img id="icon" src="img/facebook (1).png" alt="Ícone do facebook">
+            <img id="icon" src="img/instagram (1).png" alt="Ícone do instagram">
+            <img id="icon" src="img/tik-tok.png" alt="Ícone do Tik tok">
+            <img id="icon" src="img/o-email.png" alt="Ícone do Email ">
+        </div>
+        <div id="endereco">
+            <p>R. São Paulo, 1147 - Bloco A - Victor Konder, Blumenau - SC, 89012-001</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('show');
+        }
+    </script>
+</body>
+
+</html>
